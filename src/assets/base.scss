@@ -1,0 +1,19 @@
+$bg-color: #0b0c10;
+$text-color: #ffffff;
+$title-color: #66fcf1;
+$sub-title-color: #45A29E;
+
+.title {
+  color: $title-color;
+  font-size: 40px;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+.sub-title{
+  font-size: 30px;
+  font-weight: 400;
+  margin: 0;
+}
+
+

@@ -1,23 +1,24 @@
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
+@import '../../assets/base.scss';
+
+.navbar-wrap{
+  padding: 18px 20px;
+  & .navbar{
+    display: flex;
+    font-weight: 500;
+    font-size: 18px;
+    width: 100%;
+    justify-content: flex-end;
+    cursor: pointer;
+    & .nav-item{
+      margin: 0 20px;
+      color: $text-color;
+      &:hover{
+        color: #45A29E;
+      }
+      &.active{
+        background-color: $title-color;
+        color: $bg-color;
+      }
+    }
   }
-  
-  li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  li a:hover {
-    background-color: #111;
-  }
+}

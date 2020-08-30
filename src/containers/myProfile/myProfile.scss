@@ -1,0 +1,26 @@
+@import '../../assets/base.scss';
+
+.my-profile-wrap {
+  width: 100%;
+  & .block{
+    display: flex;
+    padding: 0 0 20px 0;
+    & .text-wrap{
+      flex: 1;
+    }
+    & .image-wrap{
+      margin: 20px 0;
+      flex: 1;
+      position: relative;
+    }
+  }
+  & .text-group{
+    margin-bottom: 20px;
+  }
+
+  & .text-highlight{
+    font-size: 18px;
+    background-color: $sub-title-color;
+    color: $bg-color;
+  }
+}

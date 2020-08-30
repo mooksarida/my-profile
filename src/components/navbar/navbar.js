@@ -1,19 +1,63 @@
 import React, { Component } from 'react'
 import "./navbar.scss";
+import { withRouter } from "react-router";
+
+const navItemLists = [
+  {
+    id: 'my-profile',
+    display: 'MY PROFILE',
+    link: '/',
+    isInternal: true
+  },
+  {
+    id: 'demo',
+    display: 'DEMO',
+    link: '/demo',
+    isInternal: true
+  },
+  {
+    id: 'github',
+    display: 'GITHUB',
+    link: 'https://github.com/mooksarida/my-profile',
+    isInternal: false
+  }
+];
 
 class NavbarComponent extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      active: 'my-profile'
+    }
+  }
+
+  onClickNavItem = (item) => {
+    if (item.isInternal) {
+      this.props.history.push(item.link);
+      this.setState({ active: item.id });
+    } else {
+      window.open(item.link, "_blank");
+    }
+  }
+
   render() {
     return (
-      <div>
-        <ul>
-          <li><a className="active" href="#home">MY PROFILE</a></li>
-          <li><a href="#news">DEMO</a></li>
-          <li><a href="#news">GITHUB</a></li>
-        </ul>
+      <div className="navbar-wrap">
+        <div className="navbar">
+          {
+            navItemLists.map(item => {
+              let navItemClass = ['nav-item'];
+              if (item.id === this.state.active) {
+                navItemClass.push('active');
+              }
+              return <div key={item.id} className={navItemClass.join(' ')} onClick={() => this.onClickNavItem(item)}>{item.display}</div>
+            })
+          }
+        </div>
       </div>
     );
   }
 }
 
-export default NavbarComponent; 
+export default withRouter(NavbarComponent); 
