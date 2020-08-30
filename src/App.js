@@ -15,9 +15,7 @@ export default function App() {
       <Router>
         <NavbarComponent />
         <div className="app-body">
-          <Switch>
             <Route exact path="/" component={myProfile} />
-          </Switch>
         </div>
       </Router>
     </div>
