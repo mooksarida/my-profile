@@ -23,7 +23,7 @@ const navItemLists = [
   }
 ];
 
-const rootPath = '/my-profile';
+const gitHubRootPath = '/my-profile';
 
 class NavbarComponent extends Component {
 
@@ -36,7 +36,7 @@ class NavbarComponent extends Component {
 
   onClickNavItem = (item) => {
     if (item.isInternal) {
-      this.props.history.push(rootPath + item.link);
+      this.props.history.push(gitHubRootPath + item.link);
       this.setState({ active: item.id });
     } else {
       window.open(item.link, "_blank");
