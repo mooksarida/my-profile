@@ -15,7 +15,7 @@ export default function App() {
   return (
     <div className="app-wrap">
       <Router>
-        <NavbarComponent />
+        <NavbarComponent rootPath={gitHubRootPath}/>
         <div className="app-body">
           <Route exact path={gitHubRootPath + '/'} component={myProfile} />
         </div>

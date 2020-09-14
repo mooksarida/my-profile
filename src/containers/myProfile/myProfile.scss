@@ -1,26 +1,159 @@
-@import '../../assets/base.scss';
+@import "../../assets/base.scss";
 
 .my-profile-wrap {
   width: 100%;
-  & .block{
+
+  & .block1 {
     display: flex;
     padding: 0 0 20px 0;
-    & .text-wrap{
-      flex: 1;
+  }
+  & .block2 {
+    display: flex;
+    padding: 0 0 20px 0;
+  }
+  & .text-wrap {
+    flex: 1;
+  }
+
+  & .image-wrap {
+    margin: 20px 0;
+    flex: 1;
+    position: relative;
+    & .image-shadow {
+      background-color: #1f2833;
+      width: 500px;
+      height: 360px;
     }
-    & .image-wrap{
-      margin: 20px 0;
-      flex: 1;
-      position: relative;
+    & .image {
+      position: absolute;
+      top: -40px;
+      left: 40px;
+      width: 500px;
+      height: 360px;
     }
   }
-  & .text-group{
+  & .text-group {
     margin-bottom: 20px;
   }
 
-  & .text-highlight{
+  & .text-highlight {
     font-size: 18px;
     background-color: $sub-title-color;
     color: $bg-color;
   }
 }
+
+@media only screen and (max-width: 1175px) {
+  .my-profile-wrap {
+    width: 100%;
+    & .block1 {
+      display: flex;
+      flex-direction: column-reverse;
+      padding: 40px 0 20px 0;
+    }
+    & .block2 {
+      display: flex;
+      flex-direction: column;
+      padding: 0 0 20px 0;
+    }
+
+    & .text-wrap {
+      flex: 1;
+    }
+
+    & .image-wrap {
+      margin: auto;
+      flex: 1;
+      position: relative;
+      & .image-shadow {
+        background-color: #1f2833;
+        width: 500px;
+        height: 360px;
+      }
+      & .image {
+        position: absolute;
+        top: -40px;
+        left: 40px;
+        width: 500px;
+        height: 360px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .my-profile-wrap {
+    width: 100%;
+    & .block1 {
+      display: flex;
+      flex-direction: column-reverse;
+      padding: 40px 0 20px 0;
+    }
+    & .block2 {
+      display: flex;
+      flex-direction: column;
+      padding: 0 0 20px 0;
+    }
+
+    & .text-wrap {
+      flex: 1;
+    }
+
+    & .image-wrap {
+      margin: auto;
+      flex: 1;
+      position: relative;
+      & .image-shadow {
+        background-color: #1f2833;
+        width: 300px;
+        height: 220px;
+      }
+      & .image {
+        position: absolute;
+        top: -40px;
+        left: 40px;
+        width: 300px;
+        height: 220px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .my-profile-wrap {
+    width: 100%;
+    & .block1 {
+      display: flex;
+      flex-direction: column-reverse;
+      padding: 40px 0 20px 0;
+    }
+    & .block2 {
+      display: flex;
+      flex-direction: column;
+      padding: 0 0 20px 0;
+    }
+
+    & .text-wrap {
+      flex: 1;
+    }
+
+    & .image-wrap {
+      margin: auto;
+      flex: 1;
+      position: relative;
+      & .image-shadow {
+        background-color: #1f2833;
+        width: 250px;
+        height: 190px;
+      }
+      & .image {
+        position: absolute;
+        top: -10px;
+        left: 10px;
+        width: 250px;
+        height: 190px;
+      }
+    }
+  }
+}
+

@@ -3,14 +3,13 @@ import './myProfile.scss';
 import myImage from '../../assets/images/me.jpg';
 
 class MyProfile extends Component {
-  state = { loading: true };
 
   render() {
     return (
       <div className="my-profile-wrap">
-        <div className="block">
+        <div className="title">SARIDA JONGBURI {'<' + 'MOOK' + '>'}</div>
+        <div className="block1">
           <div className="text-wrap">
-            <div className="title">SARIDA JONGBURI {'<' + 'MOOK' + '>'}</div>
             <div className="text-group">
               <div className="sub-title">Front-end Developer</div>
             </div>
@@ -24,11 +23,11 @@ class MyProfile extends Component {
             </div>
           </div>
           <div className="image-wrap">
-            <div style={{ width: "500px", height: "360px", backgroundColor: "#1F2833" }}></div>
-            <img style={{ position: "absolute", top: "40px", left: "40px" }} width="500" height="360" src={myImage} />
+            <div className="image-shadow"></div>
+            <img className="image" src={myImage} />
           </div>
         </div>
-        <div className="block">
+        <div className="block2">
           <div className="text-wrap">
             <div className="text-group">
               <div className="sub-title">Education</div>
